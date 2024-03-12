@@ -1,0 +1,60 @@
+
+body {
+    margin: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Lighter text for contrast */
+    display: flex;
+    flex-direction: column; /* Allows content to grow vertically */
+}
+
+.shortcut-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Takes up available space */
+    overflow: auto; /* Allows scrolling if content exceeds viewport */
+}
+
+.shortcut-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto; /* Center the container */
+}
+
+.shortcut-container a {
+    text-decoration: none;
+    color: #e0e0e0; /* Light text color */
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.shortcut-container img {
+    width: 150px;  /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    object-fit: contain; /* Resize to fit within the container, maintaining aspect ratio */
+    background-color: #000; /* Optional: fill empty space with a background color */
+}
+
+
+.shortcut-container a:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+
+.shortcut-container a:hover {
+    color: #ffffff;
+}
+
+/* Larger label size */
+.shortcut-container span {
+    display: block; /* Make span take the full width */
+    margin-top: 8px; /* Space between the image and the label */
+    font-size: 18px; /* Increased font size */
+    font-weight: bold; /* Optional: makes the label text bold */
+}
